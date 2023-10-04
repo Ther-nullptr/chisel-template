@@ -35,8 +35,6 @@ simple test (w/o print):
           dut.io.a.poke(a.U)
           dut.io.b.poke(b.U)
           dut.clock.step(1)
-          println(s"expect: $a + $b = $result")
-          println(s"result: ${dut.io.c.peek()}")
           dut.io.c.expect(result.U)
         }
       }
